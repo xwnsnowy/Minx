@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+p{
+  font-size: large;
+}
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.introduction{
+  width: 100%;
+  height: 1000px;
+  background-image: url("./bgnui.jpg");
+  background-size: cover;
+}
+.introduction h1,h2{
+  margin: 0;
+  padding-top: 100px;
+  text-align: center;
+  font-family: "Satisfy", cursive;
+}
+
+.introduction h1{
+  color:darkslateblue;
+  font-size: 6em;
+}
+
+.introduction h2{
+  color:darkslateblue;
+  font-size: 3em;
+}
+.introduce-yourself{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.introduce-yourself img{
+  padding-top:100px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+.introduce-yourself h1{
+  color:blue;
+  font-size: 3em;
+}
+
+.first-skill{
+  padding-top: 50px;
+}
+
+.introduce-yourskills{
+  padding-top: 100px;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: left; 
+}
+.first-skill {
+  display: flex;
+  max-width: 100%;
+  justify-content: center; 
+  align-items: center; 
+  text-align: left; 
+}
+.second-skill{
+  display: flex;
+  max-width: 100%;
+  justify-content: center; 
+  align-items: center; 
+  text-align: left; 
+}
+.introduce-yourskills span{
+  color:darkblue;
+  font-weight: bold;
+  font-size: larger;
+}
+.introduce-yourskills h1{
+  color:blue;
+  font-size: 3em;
+}
+.pc-img img{
+  width: 150px;
+}
+
+.get-in-touch{
+   max-width: 30%;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+}
+
+.get-in-touch h1{
+  color: blue;
+}
+
+.get-in-touch span{
+  color:darkblue;
+  font-weight: bold;
+  font-size: larger;
+}
+button {
+    background-color:  tomato; 
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: large;
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+  }
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+footer{
+  height: 10%;
+  background-color: hotpink;
+  margin-top:100px;
+}
