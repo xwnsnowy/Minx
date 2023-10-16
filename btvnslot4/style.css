@@ -56,6 +56,7 @@ body{
 }
 .search-with-button{
   position: relative;
+  display: flex;
 }
 .search-with-button input{
   position: relative;
@@ -70,22 +71,45 @@ body{
 .item{
   padding-top: 5px;
 }
+
 .btn-search{
   position: absolute;
   height: 90%;
-  margin-top:2px;
-  margin-right: 2px;
+  margin:2px;
+  padding:11px 20px;
   right: 0;
   background-color: red;
   border-radius: 5px;
   cursor: pointer;
 }
+
 a {
   color:white;
   text-decoration-line: none;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 1050px){
+  .container-navbar{
+    display:none;
+  }
+  .item{
+    display:none;
+  }
+  .container-header-with-search input{
+    padding-left: 60px;
+  }
+  .btn-search{
+    left:0;
+    right:auto;
+  }
+  .container-header-with-search{
+  padding-top:25px;
+}
+}
+
+
+
+/* @media (max-width: 768px) {
   *{
     font-size: 10px;
   }
@@ -105,7 +129,6 @@ a {
     font-size: 14px;
   }
 
-  /* Định dạng navbar và logo trên điện thoại */
   .container-navbar {
     flex-direction: column;
     align-items: center;
@@ -122,4 +145,6 @@ a {
 
 @media (max-width: 1440px) {
 
-}
+} */
+
+
