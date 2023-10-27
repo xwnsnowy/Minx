@@ -10,23 +10,40 @@
 
 <body>
   <div class="main">
-    <form action="" method="GET" class="form" id="form-1">
-      <h3 class="heading">Login System</h3>
-      <div class="spacer"></div>
-      <div class="form-group">
-        <label for="username" class="form-label">Username</label>
-        <input id="username" name="username" type="text" placeholder="VD: email@domain.com" class="form-control"
-          autocomplete="username">
-        <div class="mar-btm-6px"><span class="form-message"></span></div>
-      </div>
-      <div class="form-group">
-        <label for="password" class="form-label">Password</label>
-        <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control"
-          autocomplete="new-password">
-        <div class="mar-btm-6px"><span class="form-message"></span></div>
-      </div>
-      <button class="form-submit" id="loginButton">Login</button>
-    </form>
+
+    <div class="form">
+      <h3>List of Accounts</h3>
+      <ul>
+        <li> username: "account1",<br>
+          password: "account1",<br>
+          status: "active",</li>
+        <li> username: "account2",<br>
+          password: "account2",<br>
+          status: "active",</li>
+        <li> username: "account2",<br>
+          password: "account2",<br>
+          status: "deactive",</li>
+      </ul>
+    </div>
+  </div>
+
+  <form action="" method="GET" class="form" id="form-1">
+    <h3 class="heading">Login System</h3>
+    <div class="spacer"></div>
+    <div class="form-group">
+      <label for="username" class="form-label">Username</label>
+      <input id="username" name="username" type="text" placeholder="VD: email@domain.com" class="form-control"
+        autocomplete="username">
+      <div class="mar-btm-6px"><span class="form-message"></span></div>
+    </div>
+    <div class="form-group">
+      <label for="password" class="form-label">Password</label>
+      <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control"
+        autocomplete="new-password">
+      <div class="mar-btm-6px"><span class="form-message"></span></div>
+    </div>
+    <button class="form-submit" id="loginButton">Login</button>
+  </form>
   </div>
   <script src="validator.js"></script>
   <script src="main.js"></script>
