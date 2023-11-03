@@ -37,6 +37,7 @@ function validateTimeInput() {
     minutesInput.value = "";
   }
 }
+
 addButton.addEventListener("click", () => {
   const hours = parseInt(hoursInput.value);
   const minutes = parseInt(minutesInput.value);
@@ -52,7 +53,7 @@ addButton.addEventListener("click", () => {
   };
 
   alarms.push(alarm);
-
+  console.log(alarms);
   updateAlarmList();
 
   saveAlarmsToLocalStorage();
@@ -67,13 +68,28 @@ function updateAlarmList() {
     alarms.forEach((alarm, index) => {
       const listItem = document.createElement("li");
       const alarmTime = formatTime(alarm.hours, alarm.minutes);
-      listItem.textContent = `Alarm at ${alarmTime}`;
+      const displayAlarmTime = document.createElement("span");
+      displayAlarmTime.textContent = `${alarmTime}`;
+      console.log(alarmTime);
+      const divDeleteButton = document.createElement("div");
       const deleteButton = document.createElement("button");
+      const labelToggle = document.createElement("label");
+      const toggle = document.createElement("input");
+      labelToggle.classList.add("toggle-switch");
+      const spanToggle = document.createElement("span");
+      spanToggle.classList.add("slider");
+      toggle.type = "checkbox";
+      toggle.id = "toggleSwitch";
       deleteButton.textContent = "Delete";
       deleteButton.addEventListener("click", () => {
         deleteAlarm(index);
       });
-      listItem.appendChild(deleteButton);
+      listItem.appendChild(displayAlarmTime);
+      listItem.appendChild(labelToggle);
+      listItem.appendChild(divDeleteButton);
+      labelToggle.appendChild(toggle);
+      labelToggle.appendChild(spanToggle);
+      divDeleteButton.appendChild(deleteButton);
       alarmList.appendChild(listItem);
     });
   }
@@ -97,8 +113,18 @@ function saveAlarmsToLocalStorage() {
   console.log(alarms);
 }
 
-// Load alarms from local storage when the page loads
 if (localStorage.getItem("alarms")) {
   alarms = JSON.parse(localStorage.getItem("alarms"));
   updateAlarmList();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleSwitch = document.getElementById("toggleSwitch");
+  toggleSwitch.addEventListener("change", function () {
+    if (toggleSwitch.checked) {
+      alert.log("alarm is ON");
+    } else {
+      alert.log("alarm is ON");
+    }
+  });
+});

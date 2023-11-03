@@ -4,13 +4,21 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
+li {
+  width: 100%;
+  list-style: none;
+  font-weight: 700;
+  color: green;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: aqua;
 }
 
 .wrapper {
@@ -18,11 +26,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: 350px;
   padding: 20px;
   background-color: #f5f5f5;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.395);
 }
 
 .clock {
@@ -64,7 +72,48 @@ body {
 
 .list-alarm {
   border-top: 1px solid #ccc;
+  width: 210px;
   padding: 20px 0;
-  max-height: 200px;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-alarm button {
+  margin: auto 0;
+  padding: 5px;
+}
+
+/* Cài đặt mặc định cho phần tử checkbox ẩn */
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+/* Thiết lập dạng thanh slider */
+.toggle-switch .slider {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: #bd9898;
+  border-radius: 30px;
+}
+
+/* Thiết lập nút trượt */
+.toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: rgb(6, 1, 19);
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* Thiết lập trạng thái ON */
+.toggle-switch input[type="checkbox"]:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
 }
