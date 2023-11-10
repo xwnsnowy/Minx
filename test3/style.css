@@ -1,0 +1,165 @@
+@import "normalize.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Merriweather */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --font-family: "Barlow Condensed", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  color: var(--text-color);
+  overflow-y: overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  width: 100rem;
+  height: 60rem;
+  border-radius: 8px;
+  box-shadow: 0 70px 40px rgba(191, 200, 230, 0.8);
+}
+
+.container h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-weight: 3.2rem;
+}
+.search {
+  position: relative;
+}
+
+input {
+  padding-left: 50px;
+  background-size: auto 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search input {
+  width: 30rem;
+  height: 5rem;
+}
+.search svg {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.search-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100rem;
+  height: 6.4rem;
+  margin-bottom: 4rem;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin-right: 2rem;
+}
+
+.navbar ul li:nth-child(2) {
+  border-radius: 8px;
+  padding: 1.2rem;
+  color: white;
+  background-color: #849fff;
+}
+
+.list-user {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 3fr;
+  grid-gap: 1.9rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  width: 32rem;
+  height: 20rem;
+}
+.user:nth-child(2) {
+  border-radius: 1.6rem;
+  border: 0.1rem solid #bfc8e5;
+}
+.user img {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 9.7rem;
+  height: 9.7rem;
+}
+
+.name-and-live h3 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+.name-and-live h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+.favorites span {
+  padding: 0.2rem 0.8rem;
+  border-radius: 1rem;
+  border: 1px solid #bfc8e5;
+  color: #516fd4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
